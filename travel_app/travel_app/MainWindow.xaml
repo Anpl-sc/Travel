@@ -1,0 +1,29 @@
+﻿<Window x:Class="travel_app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:travel_app"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="850">
+    <Grid x:Name="travelPanel" Height="520" Margin="0,0,-0.4,0" VerticalAlignment="Top">
+        <TextBox x:Name="LocFrom" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="LocFrom_TextChanged"/>
+        <ListBox x:Name="LocFromView" HorizontalAlignment="Left" Height="205" Margin="10,33,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="LocTo" HorizontalAlignment="Left" Height="23" Margin="430,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="LocTo_TextChanged"/>
+        <ListBox x:Name="LocToView" HorizontalAlignment="Left" Height="205" Margin="330,33,0,0" VerticalAlignment="Top" Width="300"/>
+        <ListView x:Name="FlightView" HorizontalAlignment="Left" Height="205" Margin="10,243,0,0" VerticalAlignment="Top" Width="620">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="FindBtn" Content="Go simple" HorizontalAlignment="Left" Margin="650,39,0,0" VerticalAlignment="Top" Width="102" Click="FindBtn_Click"/>
+        <DatePicker x:Name="FlightDate" HorizontalAlignment="Left" Margin="650,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="403,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="FindBtnCompl" Content="Go Dijkstra" HorizontalAlignment="Left" Margin="650,63,0,0" VerticalAlignment="Top" Width="102" Click="FindBtnCompl_Click"/>
+        <Button x:Name="NoFlightBtn" Content="No flights from" HorizontalAlignment="Left" Margin="650,87,0,0" VerticalAlignment="Top" Width="102" Click="NoFlightBtn_Click"/>
+        <Button x:Name="CopyBtn" Content="Copy" HorizontalAlignment="Left" Margin="650,243,0,0" VerticalAlignment="Top" Width="102" Click="CopyBtn_Click"/>
+    </Grid>
+</Window>
